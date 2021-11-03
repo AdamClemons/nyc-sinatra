@@ -1,4 +1,6 @@
 require 'bundler/setup'
+require 'pry'
+
 Bundler.require
 
 ENV['SINATRA_ENV'] ||= "development"
