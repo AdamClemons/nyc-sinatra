@@ -7,7 +7,7 @@ get '/figures/new' do
 end
 
 post '/figures' do
-  
+  binding.pry
 end
 
 end
