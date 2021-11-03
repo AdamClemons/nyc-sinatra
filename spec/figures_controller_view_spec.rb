@@ -18,7 +18,7 @@ describe FiguresController do
 
   it "allows you to view form to create a new figure" do
     visit '/figures/new'
-    # expect(page.body).to include('<form')
+    expect(page.body).to include('<form')
     expect(page.body).to include('figure[name]')
     expect(page.body).to include('figure[title_ids][]')
     expect(page.body).to include('figure[landmark_ids][]')
@@ -28,6 +28,7 @@ describe FiguresController do
 
   it "allows you to create a new figure with a title" do
     visit '/figures/new'
+    # binding.pry
     fill_in :figure_name, :with => "Doctor Who"
     check "title_#{Title.first.id}"
     click_button "Create New Figure"
